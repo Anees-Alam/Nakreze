@@ -200,17 +200,17 @@ section{
 
 /* product */
 
-.products{
+.products {
   background: var(--bg);
 }
 
-.products .box-container{
+.products .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
 }
 
-.products .box-container .box{
+.products .box-container .box {
   background: var(--white);
   border-radius: .5rem;
   box-shadow: var(--box-shadow);
@@ -219,79 +219,52 @@ section{
   position: relative;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.products .box-container .box .image img{
+.products .box-container .box .image {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  height: 350px; /* You can adjust the height as needed */
+  overflow: hidden;
 }
 
-.products .box-container .box .image .rear-img{
+.products .box-container .box .image img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure both images cover the container area */
+}
+
+.products .box-container .box .image .rear-img {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease-out;
 }
 
-.products .box-container .box:hover .image .rear-img{
+.products .box-container .box:hover .image .rear-img {
   opacity: 1;
   z-index: 0;
 }
 
-.products .box-container .box .content{
+.products .box-container .box .content {
   padding: 2rem;
   padding-top: 0;
+  margin-top: auto;
 }
 
-.products .box-container .box .content h3{
+.products .box-container .box .content h3 {
   color: var(--black);
   font-size: 2.2rem;
 }
 
-.products .box-container .box .content .price{
+.products .box-container .box .content .price {
   display: inline-block;
   color: var(--primary);
   font-size: 2.2rem;
-}
-
-.products .box-container .box .content .stars{
-  padding: 1rem 0;
-}
-
-.products .box-container .box .content .stars i{
-  font-size: 1.5rem;
-  color: gold;
-}
-
-.products .box-container .box .content .fa-shopping-cart,
-.products .box-container .box .content .fa-heart,
-.products .box-container .box .content .fa-eye{
-  text-align: center;
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  border-radius: .5rem;
-  background: none;
-  cursor: pointer;
-  font-size: 2rem;
-  color: var(--primary);
-  border: .1rem solid var(--primary);
-}
-
-.products .box-container .box .content .fa-heart,
-.products .box-container .box .content .fa-eye{
-  margin-left: .5rem;
-}
-
-.products .box-container .box .content .fa-shopping-cart:hover,
-.products .box-container .box .content .fa-heart:hover,
-.products .box-container .box .content .fa-eye:hover{
-  color: var(--white);
-  background: var(--primary);
-  box-shadow: var(--box-shadow);
-  transition: .4s linear;
 }
 
 /* end */
@@ -328,12 +301,12 @@ section{
 }
 
 .social-link a {
-  font-size: 44px; /* Adjust the size of the icons as needed */
+  font-size: 85px; /* Adjust the size of the icons as needed */
   color: #000; /* Adjust the color of the icons as needed */
 }
 
 .social-link span {
-  font-size: 36px; /* Adjust the size of the text as needed */
+  font-size: 75px; /* Adjust the size of the text as needed */
   color: #000; /* Adjust the color of the text as needed */
 }
 
