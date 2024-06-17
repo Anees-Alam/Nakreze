@@ -6,9 +6,10 @@
     --white:#fff;
     --light-black: #666;
     --hover: rgba(244, 244, 244, 0.8);
-    --bg: #f9f9f9;
+    --bg: #2f2d2d;
     --border: 0.1rem solid rgba(0, 0, 0, 0.3);
     --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --light-maroon: #b56576; /* Added light maroon color */
 }
 
 *{
@@ -48,7 +49,7 @@ section{
 .heading{
   text-align: center;
   font-size: 4rem;
-  color: var(--black);
+  color: var(--light-maroon);
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 3rem;
@@ -72,7 +73,7 @@ section{
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: var(--white);
+  background: var(--light-maroon);
   box-shadow: var(--box-shadow);
   display: flex;
   align-items: center;
@@ -93,7 +94,7 @@ section{
 
 .header .navbar a{
   font-size: 1.7rem;
-  color: var(--black);
+  color: var(--white);
   margin: 0 1rem;
 }
 
@@ -211,7 +212,7 @@ section{
 }
 
 .products .box-container .box {
-  background: var(--white);
+  background: var(--light-maroon);
   border-radius: .5rem;
   box-shadow: var(--box-shadow);
   height: 100%;
@@ -257,13 +258,13 @@ section{
 }
 
 .products .box-container .box .content h3 {
-  color: var(--black);
+  color: var(--white);
   font-size: 2.2rem;
 }
 
 .products .box-container .box .content .price {
   display: inline-block;
-  color: var(--primary);
+  color: var(--white);
   font-size: 2.2rem;
 }
 
@@ -271,6 +272,13 @@ section{
 
 
 /* contact */
+.contact {
+  background: var(--bg);
+}
+
+.contact .heading{
+  color: var(--light-maroon);
+}
 
 .contact .row{
   display: flex;
@@ -285,34 +293,46 @@ section{
 
 .contact .row .image img{
   width: 100%;
+  background-color: var(--bg);
+}
+
+.contact .row .content {
+  flex: 1 1 40rem;
+}
+
+.contact .row .content h3 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.contact .row .content p {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 2;
 }
 
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Space between each social link */
-  margin-top: 20px; /* Space above the social links */
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the icon and the username */
+  gap: 10px;
 }
 
 .social-link a {
-  font-size: 85px; /* Adjust the size of the icons as needed */
-  color: #000; /* Adjust the color of the icons as needed */
+  font-size: 85px;
+  color: var(--primary);
 }
 
 .social-link span {
-  font-size: 75px; /* Adjust the size of the text as needed */
-  color: #000; /* Adjust the color of the text as needed */
+  font-size: 75px;
+  color: var(--primary);
 }
-
-
-
-
 /* end */
 
 /* footer */
@@ -349,33 +369,12 @@ section{
   margin-top: 1rem;
 }
 
-.footer .box-container .box .share a{
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height:  4.5rem;
-  font-size: 1.7rem;
-  background: var(--primary);
-  color: var(--white);
-  margin-right: .3rem;
-  text-align: center;
-  border-radius: 50%;
-}
-
-.footer .box-container .box .share a:hover{
-  background: var(--light-black);
-  transform: rotate(360deg);
-}
-
 .footer .box-container .box .link{
   display: block;
   font-size: 1.7rem;
   line-height: 2;
   padding: .5rem 0;
   color: var(--light-black);
-}
-
-.footer .box-container .box .link:hover{
-  color: var(--primary);
 }
 
 .footer .box-container .box .link i{
