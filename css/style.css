@@ -6,7 +6,7 @@
     --white:#fff;
     --light-black: #666;
     --hover: rgba(244, 244, 244, 0.8);
-    --bg: #2f2d2d;
+    --bg: #ffffff;
     --border: 0.1rem solid rgba(0, 0, 0, 0.3);
     --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     --light-maroon: #b56576; /* Added light maroon color */
@@ -283,21 +283,21 @@ section{
 .contact .row{
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .contact .row .image{
-  flex: 1 1 40rem;
+  flex: 3 0 30rem;
 }
 
 .contact .row .image img{
-  width: 100%;
+  width: 50%;
   background-color: var(--bg);
 }
 
 .contact .row .content {
-  flex: 1 1 40rem;
+  flex: 1 1 25rem;
 }
 
 .contact .row .content h3 {
@@ -306,7 +306,7 @@ section{
 }
 
 .contact .row .content p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--white);
   line-height: 2;
 }
@@ -315,7 +315,7 @@ section{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .social-link {
